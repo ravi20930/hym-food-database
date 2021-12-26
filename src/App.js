@@ -2,26 +2,24 @@ import './App.css';
 import FoodListComponent from './components/FoodListComponent';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import CreateFood from './components/CreateFood';
 
 function App() {
   return (
     <>
-      <Header />
-      <div className="container">
-        <BrowserRouter>
-          <Routes>
-            <Route>
-              <Route path="/" exact component={FoodListComponent}></Route>
-              <Route path="/foods" component={FoodListComponent}></Route>
-              <Route path="/create-food" component={CreateFood}></Route>
-            </Route>
-          </Routes>
-        </BrowserRouter>
-        <FoodListComponent />
+      <div className='container'>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" exact component={FoodListComponent} />
+            <Route exact path="/foods" component={FoodListComponent}></Route>
+            <Route exact path="/create-food/:id" component={CreateFood}></Route>
+            <Route exact path="/:id" component={CreateFood}></Route>
+          </Switch>
+          <Footer />
+        </Router>
       </div>
-      <Footer />
     </>
   );
 }

@@ -6,7 +6,7 @@ export default class Footer extends Component {
     render() {
         return (
             <div>
-                <footer class="footer">
+                <footer className='footer'>
                     <div class="footer-copyright text-center py-3">&nbsp;
                         <a href="https://itisravi.com/hym">hityourmacros</a>
                     </div>
