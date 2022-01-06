@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const FOODS_API_BASE_URL = "http://hymfooddatabase-env.eba-f6veq8fm.us-east-2.elasticbeanstalk.com/api/v1/foods";
+const FOODS_API_BASE_URL = "http://localhost:8080/api/v1/foods";
 
 class FoodService {
 
